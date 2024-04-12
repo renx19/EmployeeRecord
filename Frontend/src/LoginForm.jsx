@@ -20,7 +20,7 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4001/login', formData);
+      const response = await axios.post('https://employeerecordcrud.onrender.com/login', formData);
       console.log('Login Successful:', response.data);
       // Set loggedIn to true upon successful login
       setLoggedIn(true);

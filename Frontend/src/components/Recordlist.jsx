@@ -28,7 +28,7 @@ const RecordList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/employees');
+      const response = await axios.get('https://employeerecordcrud.onrender.com/employees');
       setRecords(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -36,7 +36,7 @@ const RecordList = () => {
   };
   const editRecord = async (id, newData) => {
     try {
-      await axios.put(`http://localhost:4001/employees/${id}`, newData);
+      await axios.put(`https://employeerecordcrud.onrender.com/employees/${id}`, newData);
       fetchData(); // Refetch data after editing
     } catch (error) {
       console.error('Error editing record:', error);
@@ -45,7 +45,7 @@ const RecordList = () => {
 
   const deleteRecord = async (id) => {
     try {
-      await axios.delete(`http://localhost:4001/employees/${id}`);
+      await axios.delete(`https://employeerecordcrud.onrender.com/employees/${id}`);
       fetchData(); // Refetch data after deletion
     } catch (error) {
       console.error('Error deleting record:', error);

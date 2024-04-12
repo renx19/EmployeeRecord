@@ -21,7 +21,7 @@ function SignupForm() {
       return; // Exit early if password is too short
     }
 
-    axios.post('http://localhost:4001/register', { firstName, lastName, email, password })
+    axios.post('https://employeerecordcrud.onrender.com/register', { firstName, lastName, email, password })
       .then(result => {
         console.log(result);
         navigate('/login');

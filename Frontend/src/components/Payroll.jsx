@@ -6,7 +6,7 @@ function Payroll() {
 
   useEffect(() => {
     // Define the URL of your local API
-    const apiUrl = 'http://localhost:4001/employees';
+    const apiUrl = 'https://employeerecordcrud.onrender.com/employees';
 
     // Fetch data from the API
     fetch(apiUrl)

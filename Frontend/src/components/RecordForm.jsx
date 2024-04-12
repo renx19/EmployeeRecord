@@ -24,7 +24,7 @@ const RecordForm = ({ addRecord }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4001/employees', {
+      const response = await axios.post('https://employeerecordcrud.onrender.com/employees', {
         name,
         phone,
         address,
